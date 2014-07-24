@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		170D7C2019808753005C9AC2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170D7C1F19808753005C9AC2 /* Cocoa.framework */; };
+		170D7C2A19808753005C9AC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 170D7C2819808753005C9AC2 /* InfoPlist.strings */; };
+		170D7C2C19808753005C9AC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 170D7C2B19808753005C9AC2 /* main.m */; };
+		170D7C3019808753005C9AC2 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 170D7C2E19808753005C9AC2 /* Credits.rtf */; };
+		170D7C3319808753005C9AC2 /* JRDDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 170D7C3219808753005C9AC2 /* JRDDocument.m */; };
+		170D7C3619808753005C9AC2 /* JRDDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 170D7C3419808753005C9AC2 /* JRDDocument.xib */; };
+		170D7C3919808753005C9AC2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 170D7C3719808753005C9AC2 /* MainMenu.xib */; };
+		170D7C3B19808753005C9AC2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 170D7C3A19808753005C9AC2 /* Images.xcassets */; };
+		170D7C4219808753005C9AC2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170D7C4119808753005C9AC2 /* XCTest.framework */; };
+		170D7C4319808753005C9AC2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170D7C1F19808753005C9AC2 /* Cocoa.framework */; };
+		170D7C4B19808753005C9AC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 170D7C4919808753005C9AC2 /* InfoPlist.strings */; };
+		170D7C4D19808753005C9AC2 /* HW3_jordandTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 170D7C4C19808753005C9AC2 /* HW3_jordandTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		170D7C4419808753005C9AC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 170D7C1419808753005C9AC2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 170D7C1B19808753005C9AC2;
+			remoteInfo = HW3_jordand;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		170D7C1C19808753005C9AC2 /* HW3_jordand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW3_jordand.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		170D7C1F19808753005C9AC2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		170D7C2219808753005C9AC2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		170D7C2319808753005C9AC2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		170D7C2419808753005C9AC2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		170D7C2719808753005C9AC2 /* HW3_jordand-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HW3_jordand-Info.plist"; sourceTree = "<group>"; };
+		170D7C2919808753005C9AC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		170D7C2B19808753005C9AC2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		170D7C2D19808753005C9AC2 /* HW3_jordand-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HW3_jordand-Prefix.pch"; sourceTree = "<group>"; };
+		170D7C2F19808753005C9AC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		170D7C3119808753005C9AC2 /* JRDDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRDDocument.h; sourceTree = "<group>"; };
+		170D7C3219808753005C9AC2 /* JRDDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRDDocument.m; sourceTree = "<group>"; };
+		170D7C3519808753005C9AC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/JRDDocument.xib; sourceTree = "<group>"; };
+		170D7C3819808753005C9AC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		170D7C3A19808753005C9AC2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		170D7C4019808753005C9AC2 /* HW3_jordandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HW3_jordandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		170D7C4119808753005C9AC2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		170D7C4819808753005C9AC2 /* HW3_jordandTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HW3_jordandTests-Info.plist"; sourceTree = "<group>"; };
+		170D7C4A19808753005C9AC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		170D7C4C19808753005C9AC2 /* HW3_jordandTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HW3_jordandTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		170D7C1919808753005C9AC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				170D7C2019808753005C9AC2 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		170D7C3D19808753005C9AC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				170D7C4319808753005C9AC2 /* Cocoa.framework in Frameworks */,
+				170D7C4219808753005C9AC2 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		170D7C1319808753005C9AC2 = {
+			isa = PBXGroup;
+			children = (
+				170D7C2519808753005C9AC2 /* HW3_jordand */,
+				170D7C4619808753005C9AC2 /* HW3_jordandTests */,
+				170D7C1E19808753005C9AC2 /* Frameworks */,
+				170D7C1D19808753005C9AC2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		170D7C1D19808753005C9AC2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				170D7C1C19808753005C9AC2 /* HW3_jordand.app */,
+				170D7C4019808753005C9AC2 /* HW3_jordandTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		170D7C1E19808753005C9AC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				170D7C1F19808753005C9AC2 /* Cocoa.framework */,
+				170D7C4119808753005C9AC2 /* XCTest.framework */,
+				170D7C2119808753005C9AC2 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		170D7C2119808753005C9AC2 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				170D7C2219808753005C9AC2 /* AppKit.framework */,
+				170D7C2319808753005C9AC2 /* CoreData.framework */,
+				170D7C2419808753005C9AC2 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		170D7C2519808753005C9AC2 /* HW3_jordand */ = {
+			isa = PBXGroup;
+			children = (
+				170D7C3119808753005C9AC2 /* JRDDocument.h */,
+				170D7C3219808753005C9AC2 /* JRDDocument.m */,
+				170D7C3419808753005C9AC2 /* JRDDocument.xib */,
+				170D7C3719808753005C9AC2 /* MainMenu.xib */,
+				170D7C3A19808753005C9AC2 /* Images.xcassets */,
+				170D7C2619808753005C9AC2 /* Supporting Files */,
+			);
+			path = HW3_jordand;
+			sourceTree = "<group>";
+		};
+		170D7C2619808753005C9AC2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				170D7C2719808753005C9AC2 /* HW3_jordand-Info.plist */,
+				170D7C2819808753005C9AC2 /* InfoPlist.strings */,
+				170D7C2B19808753005C9AC2 /* main.m */,
+				170D7C2D19808753005C9AC2 /* HW3_jordand-Prefix.pch */,
+				170D7C2E19808753005C9AC2 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		170D7C4619808753005C9AC2 /* HW3_jordandTests */ = {
+			isa = PBXGroup;
+			children = (
+				170D7C4C19808753005C9AC2 /* HW3_jordandTests.m */,
+				170D7C4719808753005C9AC2 /* Supporting Files */,
+			);
+			path = HW3_jordandTests;
+			sourceTree = "<group>";
+		};
+		170D7C4719808753005C9AC2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				170D7C4819808753005C9AC2 /* HW3_jordandTests-Info.plist */,
+				170D7C4919808753005C9AC2 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		170D7C1B19808753005C9AC2 /* HW3_jordand */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 170D7C5019808753005C9AC2 /* Build configuration list for PBXNativeTarget "HW3_jordand" */;
+			buildPhases = (
+				170D7C1819808753005C9AC2 /* Sources */,
+				170D7C1919808753005C9AC2 /* Frameworks */,
+				170D7C1A19808753005C9AC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HW3_jordand;
+			productName = HW3_jordand;
+			productReference = 170D7C1C19808753005C9AC2 /* HW3_jordand.app */;
+			productType = "com.apple.product-type.application";
+		};
+		170D7C3F19808753005C9AC2 /* HW3_jordandTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 170D7C5319808753005C9AC2 /* Build configuration list for PBXNativeTarget "HW3_jordandTests" */;
+			buildPhases = (
+				170D7C3C19808753005C9AC2 /* Sources */,
+				170D7C3D19808753005C9AC2 /* Frameworks */,
+				170D7C3E19808753005C9AC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				170D7C4519808753005C9AC2 /* PBXTargetDependency */,
+			);
+			name = HW3_jordandTests;
+			productName = HW3_jordandTests;
+			productReference = 170D7C4019808753005C9AC2 /* HW3_jordandTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		170D7C1419808753005C9AC2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JRD;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Jordan Dobson";
+				TargetAttributes = {
+					170D7C3F19808753005C9AC2 = {
+						TestTargetID = 170D7C1B19808753005C9AC2;
+					};
+				};
+			};
+			buildConfigurationList = 170D7C1719808753005C9AC2 /* Build configuration list for PBXProject "HW3_jordand" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 170D7C1319808753005C9AC2;
+			productRefGroup = 170D7C1D19808753005C9AC2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				170D7C1B19808753005C9AC2 /* HW3_jordand */,
+				170D7C3F19808753005C9AC2 /* HW3_jordandTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		170D7C1A19808753005C9AC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				170D7C3619808753005C9AC2 /* JRDDocument.xib in Resources */,
+				170D7C3B19808753005C9AC2 /* Images.xcassets in Resources */,
+				170D7C2A19808753005C9AC2 /* InfoPlist.strings in Resources */,
+				170D7C3019808753005C9AC2 /* Credits.rtf in Resources */,
+				170D7C3919808753005C9AC2 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		170D7C3E19808753005C9AC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				170D7C4B19808753005C9AC2 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		170D7C1819808753005C9AC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				170D7C2C19808753005C9AC2 /* main.m in Sources */,
+				170D7C3319808753005C9AC2 /* JRDDocument.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		170D7C3C19808753005C9AC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				170D7C4D19808753005C9AC2 /* HW3_jordandTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		170D7C4519808753005C9AC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 170D7C1B19808753005C9AC2 /* HW3_jordand */;
+			targetProxy = 170D7C4419808753005C9AC2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		170D7C2819808753005C9AC2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				170D7C2919808753005C9AC2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		170D7C2E19808753005C9AC2 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				170D7C2F19808753005C9AC2 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		170D7C3419808753005C9AC2 /* JRDDocument.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				170D7C3519808753005C9AC2 /* Base */,
+			);
+			name = JRDDocument.xib;
+			sourceTree = "<group>";
+		};
+		170D7C3719808753005C9AC2 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				170D7C3819808753005C9AC2 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		170D7C4919808753005C9AC2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				170D7C4A19808753005C9AC2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		170D7C4E19808753005C9AC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		170D7C4F19808753005C9AC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		170D7C5119808753005C9AC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HW3_jordand/HW3_jordand-Prefix.pch";
+				INFOPLIST_FILE = "HW3_jordand/HW3_jordand-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		170D7C5219808753005C9AC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HW3_jordand/HW3_jordand-Prefix.pch";
+				INFOPLIST_FILE = "HW3_jordand/HW3_jordand-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		170D7C5419808753005C9AC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HW3_jordand.app/Contents/MacOS/HW3_jordand";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HW3_jordand/HW3_jordand-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HW3_jordandTests/HW3_jordandTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		170D7C5519808753005C9AC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HW3_jordand.app/Contents/MacOS/HW3_jordand";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HW3_jordand/HW3_jordand-Prefix.pch";
+				INFOPLIST_FILE = "HW3_jordandTests/HW3_jordandTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		170D7C1719808753005C9AC2 /* Build configuration list for PBXProject "HW3_jordand" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				170D7C4E19808753005C9AC2 /* Debug */,
+				170D7C4F19808753005C9AC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		170D7C5019808753005C9AC2 /* Build configuration list for PBXNativeTarget "HW3_jordand" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				170D7C5119808753005C9AC2 /* Debug */,
+				170D7C5219808753005C9AC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		170D7C5319808753005C9AC2 /* Build configuration list for PBXNativeTarget "HW3_jordandTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				170D7C5419808753005C9AC2 /* Debug */,
+				170D7C5519808753005C9AC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 170D7C1419808753005C9AC2 /* Project object */;
+}
