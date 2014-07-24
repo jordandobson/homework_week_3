@@ -7,17 +7,37 @@
 //
 
 #import "JRDDocument.h"
+#import "JRDPersonProfile.h"
+
+#pragma mark - PRIVATE METHODS & VARIABLES
+
+@interface JRDPersonProfile ()
+@property (weak) IBOutlet NSTextField *fullNameInput;
+@property (weak) IBOutlet NSImageView *avatarInput;
+@property (weak) IBOutlet NSTextField *emailInput;
+@property (weak) IBOutlet NSTextField *addressInput;
+@property (unsafe_unretained) IBOutlet NSTextView *notesInput;
+- (IBAction)emailLink:(id)sender;
+- (IBAction)bingLink :(id)sender;
+- (IBAction)googleMap:(id)sender;
+@end
 
 @implementation JRDDocument
 
+#pragma mark - Initializer
+
 - (id)init
 {
+    NSLog(@"DOCUMENT INITIALIZED");
     self = [super init];
     if (self) {
-        // Add your subclass-specific initialization here.
+        _profile = [JRDPersonProfile new];
+        NSLog(@"%@", _profile);
     }
     return self;
 }
+
+#pragma mark - Window Management
 
 - (NSString *)windowNibName
 {
@@ -30,7 +50,10 @@
 {
     [super windowControllerDidLoadNib:aController];
     // Add any code here that needs to be executed once the windowController has loaded the document's window.
+    NSLog(@"NIB WAS LOADED");
 }
+
+#pragma mark - Saving And Loading
 
 + (BOOL)autosavesInPlace
 {
@@ -48,6 +71,8 @@
 
 - (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError
 {
+
+    NSLog(@"DATA WAS READ");
     // Insert code here to read your document from the given data of the specified type. If outError != NULL, ensure that you create and set an appropriate error when returning NO.
     // You can also choose to override -readFromFileWrapper:ofType:error: or -readFromURL:ofType:error: instead.
     // If you override either of these, you should also override -isEntireFileLoaded to return NO if the contents are lazily loaded.
@@ -56,4 +81,9 @@
     return YES;
 }
 
+#pragma mark - Button Actions
+
+- (IBAction)emailLink:(id)sender { }
+- (IBAction)bingLink:(id)sender  { }
+- (IBAction)googleMap:(id)sender { }
 @end

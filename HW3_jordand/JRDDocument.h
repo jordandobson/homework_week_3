@@ -7,7 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "JRDPersonProfile.h"
 
-@interface JRDDocument : NSDocument
+@interface JRDDocument : NSDocument <NSWindowDelegate>
+
+@property (copy, nonatomic) JRDPersonProfile *profile;
+
+
 
 @end
