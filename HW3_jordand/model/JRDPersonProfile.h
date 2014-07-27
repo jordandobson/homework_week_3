@@ -9,12 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface JRDPersonProfile : NSObject <NSCoding>
-
-@property (copy, nonatomic) NSString *name;
-@property (copy, nonatomic) NSString *email;
-@property (copy, nonatomic) NSString *address;
-@property (copy, nonatomic) NSImage  *avatar;
-@property (copy, nonatomic) NSString *notes;
-
-
+    @property (copy, nonatomic) NSString *name;
+    @property (copy, nonatomic) NSString *email;
+    @property (copy, nonatomic) NSString *address;
+    @property (copy, nonatomic) NSImage  *avatar;
+    @property (copy, nonatomic) NSString *notes;
 @end

@@ -8,9 +8,10 @@
             <connections>
                 <outlet property="addressInput" destination="aQh-Ht-dJx" id="RNg-Cb-XBf"/>
                 <outlet property="avatarInput" destination="Cgc-XP-1bM" id="gwT-CU-iGR"/>
+                <outlet property="docWindow" destination="xOd-HO-29H" id="wD2-x2-BgI"/>
                 <outlet property="emailInput" destination="xGW-26-erE" id="HXy-w4-WLM"/>
                 <outlet property="fullNameInput" destination="S0M-kX-rLk" id="TEe-3V-e7M"/>
-                <outlet property="notesInput" destination="JzW-gX-x2b" id="hiW-fG-54t"/>
+                <outlet property="notesInput" destination="eoM-Sl-CqZ" id="sJk-rr-doB"/>
                 <outlet property="window" destination="xOd-HO-29H" id="JIz-fz-R2o"/>
             </connections>
         </customObject>
@@ -18,8 +19,7 @@
         <customObject id="-3" userLabel="Application"/>
         <window title="Profile" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" appearanceType="lightContent" animationBehavior="default" id="xOd-HO-29H" userLabel="Window">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="546" y="214" width="330" height="413"/>
+            <rect key="contentRect" x="31" y="415" width="330" height="413"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
             <value key="minSize" type="size" width="94" height="86"/>
             <view key="contentView" appearanceType="lightContent" id="gIp-Ho-8D9">
@@ -45,7 +45,7 @@
                         <rect key="frame" x="20" y="305" width="290" height="32"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" placeholderString=" Email Address" drawsBackground="YES" id="qhT-YA-zkq">
-                            <font key="font" size="14" name="AvenirNext-UltraLight"/>
+                            <font key="font" size="14" name="AvenirNext-Regular"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -54,7 +54,7 @@
                         <rect key="frame" x="20" y="195" width="290" height="96"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" placeholderString=" Street Address" drawsBackground="YES" id="mni-dK-pWl">
-                            <font key="font" size="14" name="AvenirNext-UltraLight"/>
+                            <font key="font" size="14" name="AvenirNext-Regular"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -92,24 +92,24 @@
                             <action selector="googleMap:" target="-2" id="kQm-ha-IWf"/>
                         </connections>
                     </button>
-                    <scrollView appearanceType="lightContent" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="9fY-BF-sd1">
+                    <scrollView appearanceType="lightContent" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="3n2-wz-78j">
                         <rect key="frame" x="20" y="20" width="290" height="135"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <clipView key="contentView" id="3ia-Y6-3D8">
+                        <clipView key="contentView" id="5fp-0Q-9ob">
                             <rect key="frame" x="1" y="1" width="288" height="133"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textView importsGraphics="NO" horizontallyResizable="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="JzW-gX-x2b">
+                                <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="eoM-Sl-CqZ">
                                     <rect key="frame" x="0.0" y="0.0" width="288" height="133"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <size key="minSize" width="288" height="133"/>
                                     <size key="maxSize" width="463" height="10000000"/>
                                     <attributedString key="textStorage">
-                                        <fragment content=" Notes">
+                                        <fragment content=" ">
                                             <attributes>
-                                                <font key="NSFont" size="13" name="AvenirNext-UltraLight"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                <font key="NSFont" size="14" name="AvenirNext-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" headIndent="3"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -120,11 +120,11 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </clipView>
-                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="6gG-8d-MGM">
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="vpQ-qQ-wvG">
                             <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
-                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Qxq-0H-tzg">
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="KFY-ap-LF7">
                             <rect key="frame" x="273" y="1" width="16" height="133"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>

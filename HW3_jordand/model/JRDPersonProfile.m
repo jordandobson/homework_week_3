@@ -8,13 +8,11 @@
 
 #import "JRDPersonProfile.h"
 
-NSString * const profileKey  = @"profileKey";
-
-//NSString * const avatarKey  = @"avatarKey";
-//NSString * const nameKey    = @"nameKey";
-//NSString * const emailKey   = @"emailKey";
-//NSString * const addressKey = @"addressKey";
-//NSString * const notesKey   = @"notesKey";
+NSString * const avatarKey  = @"avatarKey";
+NSString * const nameKey    = @"nameKey";
+NSString * const emailKey   = @"emailKey";
+NSString * const addressKey = @"addressKey";
+NSString * const notesKey   = @"notesKey";
 
 @implementation JRDPersonProfile
 
@@ -33,19 +31,23 @@ NSString * const profileKey  = @"profileKey";
 #pragma mark - Encode & Decode
 
 -(void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject: self.name    forKey: nameKey    ];
+    [aCoder encodeObject: self.avatar  forKey: avatarKey  ];
+    [aCoder encodeObject: self.email   forKey: emailKey   ];
+    [aCoder encodeObject: self.address forKey: addressKey ];
+    [aCoder encodeObject: self.notes   forKey: notesKey   ];
     NSLog(@"ENCODED");
-    [aCoder encodeObject: self forKey: profileKey ];
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder {
-    NSLog(@"DECODED");
-    self = [super init];
-    JRDPersonProfile *profile = [aDecoder decodeObjectForKey:  profileKey ];
-    _avatar  = profile.avatar;
-    _name    = profile.name;
-    _email   = profile.email;
-    _address = profile.address;
-    _notes   = profile.notes;
+    if(self = [super init]) {
+        _avatar  = [aDecoder decodeObjectForKey:  avatarKey  ];
+        _name    = [aDecoder decodeObjectForKey:  nameKey    ];
+        _email   = [aDecoder decodeObjectForKey:  emailKey   ];
+        _address = [aDecoder decodeObjectForKey:  addressKey ];
+        _notes   = [aDecoder decodeObjectForKey:  notesKey   ];
+        NSLog(@"DECODED");
+    }
     return self;
 }
 
@@ -53,7 +55,7 @@ NSString * const profileKey  = @"profileKey";
 
 -(NSString *)description {
     NSMutableString *string = [[NSMutableString alloc] initWithString: @"<JRDPersonProfile: "];
-    [string appendFormat: @"%@ \n  EMAIL: %@ \n  ADDRESS: %@ \n  NOTES: %@ \n  AVATAR: %@ />", self.name, self.email, self.address, self.notes, self.avatar];
+    [string appendFormat: @"NAME: %@ \n  EMAIL: %@ \n  ADDRESS: %@ \n  NOTES: %@ \n  AVATAR: %@ />", self.name, self.email, self.address, self.notes, self.avatar];
     return string;
 }
 
