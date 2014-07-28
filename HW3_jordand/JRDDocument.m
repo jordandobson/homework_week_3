@@ -92,10 +92,10 @@ NSString * const emailURL  = @"mailto:";
 
 
     NSDictionary *values = @{
-      nameArchiveKey    : _profile.name,
-      emailArchiveKey   : _profile.email,
-      addressArchiveKey : _profile.address,
-      notesArchiveKey   : _profile.notes
+      nameArchiveKey    : self.profile.name,
+      emailArchiveKey   : self.profile.email,
+      addressArchiveKey : self.profile.address,
+      notesArchiveKey   : self.profile.notes
     };
 
 //    NSDictionary *values = @{
@@ -138,16 +138,16 @@ NSString * const emailURL  = @"mailto:";
 #pragma mark - UI Management
 
 -(void)setupUI {
-    _fullNameInput.stringValue = _profile.name;
-    _emailInput.stringValue    = _profile.email;
-    _addressInput.stringValue  = _profile.address;
+    _fullNameInput.stringValue = self.profile.name;
+    _emailInput.stringValue    = self.profile.email;
+    _addressInput.stringValue  = self.profile.address;
 
     if(![_profile.notes isEqualToString: @""]) {
-        _notesInput.string = _profile.notes;
+        _notesInput.string = self.profile.notes;
     }
 
     if(_profile.avatar != nil){
-        _avatarInput.image = _profile.avatar;
+        _avatarInput.image = self.profile.avatar;
     }
 }
 
@@ -172,9 +172,9 @@ NSString * const emailURL  = @"mailto:";
 
 #pragma mark - Button Actions
 
-- (IBAction)emailLink:(id)sender { [self openLinkAtURL: emailURL  withContent: _profile.email  ]; }
-- (IBAction)bingLink: (id)sender { [self openLinkAtURL: bingURL   withContent: _profile.address]; }
-- (IBAction)googleMap:(id)sender { [self openLinkAtURL: googleURL withContent: _profile.address]; }
+- (IBAction)emailLink:(id)sender { [self openLinkAtURL: emailURL  withContent: self.profile.email  ]; }
+- (IBAction)bingLink: (id)sender { [self openLinkAtURL: bingURL   withContent: self.profile.address]; }
+- (IBAction)googleMap:(id)sender { [self openLinkAtURL: googleURL withContent: self.profile.address]; }
 
 #pragma mark - External Link Method
 
