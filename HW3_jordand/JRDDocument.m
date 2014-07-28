@@ -17,6 +17,10 @@ NSString * const emailArchiveKey   = @"emailArchiveKey";
 NSString * const addressArchiveKey = @"addressArchiveKey";
 NSString * const notesArchiveKey   = @"notesArchiveKey";
 
+NSString * const bingURL   = @"http://bing.com/maps/?v=2&where1=";
+NSString * const googleURL = @"http://maps.google.com/maps/?q=";
+NSString * const emailURL  = @"mailto:";
+
 #pragma mark - PRIVATE METHODS & VARIABLES
 
 @interface JRDDocument ()
@@ -152,23 +156,14 @@ NSString * const notesArchiveKey   = @"notesArchiveKey";
 -(void)updatePersonModelFromTextChange:(NSTextField *)field {
     if (field == self.fullNameInput){
         _profile.name = [self.fullNameInput.stringValue copy];
-        NSLog(@"NAME UPDATED PERSON MODEL");
-        return;
     }else if (field == self.emailInput){
         _profile.email = [self.emailInput.stringValue copy];
-        NSLog(@"EMAIL UPDATED PERSON MODEL");
-        return;
     }else if (field == self.addressInput){
         _profile.address = [self.addressInput.stringValue copy];
-        NSLog(@"ADDRESS UPDATED PERSON MODEL");
-        return;
     }
 }
 
--(void)updatePersonModelFromNotesChange {
-    _profile.notes = [self.notesInput.string copy];
-    NSLog(@"NOTES UPDATED PERSON MODEL");
-}
+-(void)updatePersonModelFromNotesChange { _profile.notes = [self.notesInput.string copy]; }
 
 -(void)updatePersonModelFromImageChange {
 //_profile.avatar = [self.notesInput.string copy];
@@ -177,9 +172,19 @@ NSString * const notesArchiveKey   = @"notesArchiveKey";
 
 #pragma mark - Button Actions
 
-- (IBAction)emailLink:(id)sender { NSLog(@"Email  Link"); }
-- (IBAction)bingLink: (id)sender { NSLog(@"Bing   Link"); }
-- (IBAction)googleMap:(id)sender { NSLog(@"Google Link"); }
+- (IBAction)emailLink:(id)sender { [self openLinkAtURL: emailURL  withContent: _profile.email  ]; }
+- (IBAction)bingLink: (id)sender { [self openLinkAtURL: bingURL   withContent: _profile.address]; }
+- (IBAction)googleMap:(id)sender { [self openLinkAtURL: googleURL withContent: _profile.address]; }
+
+#pragma mark - External Link Method
+
+-(void)openLinkAtURL:(NSString *)urlPrefix withContent:(NSString *)content{
+    if (content.length > 0){
+        NSString *loc = [urlPrefix stringByAppendingString: [content stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+        NSURL *url = [NSURL URLWithString: [loc stringByReplacingOccurrencesOfString: @"%0A" withString: @",%20"]];
+        [[NSWorkspace sharedWorkspace] openURL: url];
+    }
+}
 
 #pragma mark - Field Delegates
 
