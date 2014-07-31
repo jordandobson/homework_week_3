@@ -9,11 +9,11 @@
 #import <Cocoa/Cocoa.h>
 #import "JRDPersonProfile.h"
 
-@interface JRDDocument : NSDocument <NSWindowDelegate, NSApplicationDelegate, NSTextFieldDelegate, NSTextViewDelegate, NSImageDelegate>
+@interface JRDDocument : NSDocument <NSWindowDelegate, NSApplicationDelegate, NSTextFieldDelegate, NSTextViewDelegate>
 
 @property (assign) IBOutlet NSWindow *docWindow;
 
-//-(void)controlTextDidChange:(NSNotification *)aNotification;
+
 //
 //-(void)image:(NSImage *)image didLoadRepresentation:(NSImageRep *)rep withStatus:(NSImageLoadStatus)status;
 

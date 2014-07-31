@@ -17,14 +17,13 @@ NSString * const notesKey   = @"notesKey";
 @implementation JRDPersonProfile
 
 -(id) init {
-    if(self = [super init]) {
-        _avatar  = nil;
+    self = [super init];
+    if(self) {
         _name    = @"";
         _email   = @"";
         _address = @"";
         _notes   = @"";
     }
-    NSLog(@"INITIALIZED PERSON PROFILE");
     return self;
 }
 
@@ -40,7 +39,8 @@ NSString * const notesKey   = @"notesKey";
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder {
-    if(self = [super init]) {
+    self = [super init];
+    if(self) {
         _avatar  = [aDecoder decodeObjectForKey:  avatarKey  ];
         _name    = [aDecoder decodeObjectForKey:  nameKey    ];
         _email   = [aDecoder decodeObjectForKey:  emailKey   ];

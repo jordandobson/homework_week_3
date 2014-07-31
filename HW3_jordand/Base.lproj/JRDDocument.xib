@@ -26,16 +26,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="330" height="413"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView appearanceType="lightContent" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Cgc-XP-1bM">
+                    <imageView appearanceType="lightContent" horizontalHuggingPriority="251" verticalHuggingPriority="251" tag="1" id="Cgc-XP-1bM">
                         <rect key="frame" x="17" y="348" width="48" height="48"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" selectable="YES" editable="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="NSUser" id="Auf-KI-g58"/>
+                        <imageCell key="cell" selectable="YES" editable="YES" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="NSUser" id="Auf-KI-g58"/>
+                        <connections>
+                            <action selector="imgUpdate:" target="-2" id="fhi-2B-5gU"/>
+                        </connections>
                     </imageView>
-                    <textField appearanceType="lightContent" verticalHuggingPriority="750" id="S0M-kX-rLk">
+                    <textField focusRingType="exterior" appearanceType="lightContent" verticalHuggingPriority="750" id="S0M-kX-rLk">
                         <rect key="frame" x="70" y="351" width="240" height="42"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <animations/>
-                        <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" placeholderString=" Full Name" drawsBackground="YES" id="wR1-G0-XHD">
+                        <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" focusRingType="exterior" alignment="left" placeholderString=" Full Name" drawsBackground="YES" id="wR1-G0-XHD">
                             <font key="font" size="20" name="AvenirNext-UltraLight"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -53,7 +56,7 @@
                     <textField appearanceType="lightContent" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="aQh-Ht-dJx">
                         <rect key="frame" x="20" y="195" width="290" height="96"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" placeholderString=" Street Address" drawsBackground="YES" id="mni-dK-pWl">
+                        <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" selectable="YES" editable="YES" state="on" borderStyle="bezel" placeholderString=" Street Address" drawsBackground="YES" id="mni-dK-pWl">
                             <font key="font" size="14" name="AvenirNext-Regular"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -92,27 +95,19 @@
                             <action selector="googleMap:" target="-2" id="kQm-ha-IWf"/>
                         </connections>
                     </button>
-                    <scrollView appearanceType="lightContent" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="3n2-wz-78j">
+                    <scrollView focusRingType="exterior" appearanceType="lightContent" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="3n2-wz-78j">
                         <rect key="frame" x="20" y="20" width="290" height="135"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <clipView key="contentView" id="5fp-0Q-9ob">
+                        <clipView key="contentView" focusRingType="exterior" id="5fp-0Q-9ob">
                             <rect key="frame" x="1" y="1" width="288" height="133"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="eoM-Sl-CqZ">
+                                <textView focusRingType="exterior" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="eoM-Sl-CqZ">
                                     <rect key="frame" x="0.0" y="0.0" width="288" height="133"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <size key="minSize" width="288" height="133"/>
                                     <size key="maxSize" width="463" height="10000000"/>
-                                    <attributedString key="textStorage">
-                                        <fragment content=" ">
-                                            <attributes>
-                                                <font key="NSFont" size="14" name="AvenirNext-Regular"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" headIndent="3"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <size key="minSize" width="288" height="133"/>
                                     <size key="maxSize" width="463" height="10000000"/>
@@ -128,6 +123,9 @@
                             <rect key="frame" x="273" y="1" width="16" height="133"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
+                        <connections>
+                            <outlet property="nextKeyView" destination="eoM-Sl-CqZ" id="GAD-qT-EhL"/>
+                        </connections>
                     </scrollView>
                 </subviews>
             </view>

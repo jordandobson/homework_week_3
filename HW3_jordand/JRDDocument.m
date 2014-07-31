@@ -9,33 +9,38 @@
 #import "JRDDocument.h"
 #import "JRDPersonProfile.h"
 
+
 #pragma mark - Constant Variables
 
-NSString * const avatarArchiveKey  = @"avatarArchiveKey";
-NSString * const nameArchiveKey    = @"nameArchiveKey";
-NSString * const emailArchiveKey   = @"emailArchiveKey";
-NSString * const addressArchiveKey = @"addressArchiveKey";
-NSString * const notesArchiveKey   = @"notesArchiveKey";
+//NSString * const avatarArchiveKey  = @"avatarArchiveKey";
+//NSString * const nameArchiveKey    = @"nameArchiveKey";
+//NSString * const emailArchiveKey   = @"emailArchiveKey";
+//NSString * const addressArchiveKey = @"addressArchiveKey";
+//NSString * const notesArchiveKey   = @"notesArchiveKey";
 
-NSString * const bingURL   = @"http://bing.com/maps/?v=2&where1=";
-NSString * const googleURL = @"http://maps.google.com/maps/?q=";
-NSString * const emailURL  = @"mailto:";
+NSString * const profileKey = @"profileKey";
+NSString * const bingURL    = @"http://bing.com/maps/?v=2&where1=";
+NSString * const googleURL  = @"http://maps.google.com/maps/?q=";
+NSString * const emailURL   = @"mailto:";
 
 #pragma mark - PRIVATE METHODS & VARIABLES
 
 @interface JRDDocument ()
-@property (copy, nonatomic) JRDPersonProfile *profile;
+    @property (copy, nonatomic) JRDPersonProfile *profile;
 
-@property (weak) IBOutlet NSImageView *avatarInput;
-@property (weak) IBOutlet NSTextField *fullNameInput;
-@property (weak) IBOutlet NSTextField *emailInput;
-@property (weak) IBOutlet NSTextField *addressInput;
+    @property (weak) IBOutlet NSImageView *avatarInput;
+    @property (weak) IBOutlet NSTextField *fullNameInput;
+    @property (weak) IBOutlet NSTextField *emailInput;
+    @property (weak) IBOutlet NSTextField *addressInput;
 
-@property (unsafe_unretained) IBOutlet NSTextView *notesInput;
+    @property (unsafe_unretained) IBOutlet NSTextView *notesInput;
 
-- (IBAction)emailLink:(id)sender;
-- (IBAction)bingLink :(id)sender;
-- (IBAction)googleMap:(id)sender;
+    //@property (unsafe_unretained) IBOutlet JRDTextView *notesInput;
+
+    - (IBAction)emailLink:(id)sender;
+    - (IBAction)bingLink :(id)sender;
+    - (IBAction)googleMap:(id)sender;
+    - (IBAction)imgUpdate:(id)sender;
 @end
 
 @implementation JRDDocument
@@ -47,30 +52,32 @@ NSString * const emailURL  = @"mailto:";
     self = [super init];
     if (self) {
         _profile = [JRDPersonProfile new];
+
+        // self.profile = [JRDPersonProfile new];
+        // Using This Code Gave me this Error Below
+        // DOCUMENT INITIALIZED
+        // INITIALIZED PERSON PROFILE
+        // -[JRDPersonProfile copyWithZone:]: unrecognized selector sent to instance 0x6180000532c0
+        // -[JRDPersonProfile copyWithZone:]: unrecognized selector sent to instance 0x6180000532c0
     }
     return self;
 }
 
 #pragma mark - Window Management
 
-- (NSString *)windowNibName {
-    // Override returning the nib file name of the document
-    // If you need to use a subclass of NSWindowController or if your document supports multiple NSWindowControllers, you should remove this method and override -makeWindowControllers instead.
-    return @"JRDDocument";
-}
+- (NSString *)windowNibName { return @"JRDDocument"; }
 
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController {
-
     [super windowControllerDidLoadNib:aController];
-
     self.docWindow.delegate     = self;
-
     self.fullNameInput.delegate = self;
     self.addressInput.delegate  = self;
     self.emailInput.delegate    = self;
     self.notesInput.delegate    = self;
-//    self.avatarInput.delegate = self;
+
     [self setupUI];
+    [self.notesInput setFont: [NSFont fontWithName:@"Avenir Next Regular" size:14.0] ];
+
     NSLog(@"NIB WAS LOADED");
 }
 
@@ -89,15 +96,25 @@ NSString * const emailURL  = @"mailto:";
 
 - (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError {
 
-
-
-    NSDictionary *values = @{
-      nameArchiveKey    : self.profile.name,
-      emailArchiveKey   : self.profile.email,
-      addressArchiveKey : self.profile.address,
-      notesArchiveKey   : self.profile.notes
-    };
-
+//    NSDictionary *values;
+//    if(self.profile.avatar){
+//        values = @{
+//            nameArchiveKey    : self.profile.name,
+//            emailArchiveKey   : self.profile.email,
+//            addressArchiveKey : self.profile.address,
+//            notesArchiveKey   : self.profile.notes,
+//            avatarArchiveKey  : self.profile.avatar
+//        };
+//    }else{
+//        values = @{
+//            nameArchiveKey    : self.profile.name,
+//            emailArchiveKey   : self.profile.email,
+//            addressArchiveKey : self.profile.address,
+//            notesArchiveKey   : self.profile.notes
+//        };
+//    }
+//    return [NSKeyedArchiver archivedDataWithRootObject: values];
+//
 //    NSDictionary *values = @{
 //                             nameArchiveKey    : _profile.name,
 //                             emailArchiveKey   : _profile.email,
@@ -105,29 +122,41 @@ NSString * const emailURL  = @"mailto:";
 //                             notesArchiveKey   : _profile.notes,
 //                             avatarArchiveKey  : _profile.avatar
 //                             };
-
-
-    return [NSKeyedArchiver archivedDataWithRootObject: values];
+    return [NSKeyedArchiver archivedDataWithRootObject: self.profile];
 }
 
 - (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError {
+//    NSDictionary *values = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+//
+//    self.profile.name    = values[ nameArchiveKey    ];
+//    self.profile.email   = values[ emailArchiveKey   ];
+//    self.profile.address = values[ addressArchiveKey ];
+//    self.profile.notes   = values[ notesArchiveKey   ];
+//    self.profile.avatar  = values[ avatarArchiveKey  ];
+//
+//    NSLog(@"READ PROFILE BELOW");
 
-    NSDictionary *values = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+//    if(!!self.profile){
+//    return YES;
+//    }
+//    *outError = [NSError errorWithDomain:@"Bad Data" code: 666 userInfo:nil];
+//    return NO;
 
-    _profile.name    = values[ nameArchiveKey    ];
-    _profile.email   = values[ emailArchiveKey   ];
-    _profile.address = values[ addressArchiveKey ];
-    _profile.notes   = values[ notesArchiveKey   ];
-    _profile.avatar  = values[ avatarArchiveKey  ];
-
-    NSLog(@"READ PROFILE BELOW");
-    NSLog(@"%@", self.profile);
-
+    NSLog(@"PROFILE DATA READ");
+    JRDPersonProfile * profile = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    _profile = profile;
     return YES;
+
+    // self.profile = profile;
+    // Using This Code Gave me this Error Below
+    // DOCUMENT INITIALIZED
+    // INITIALIZED PERSON PROFILE
+    // -[JRDPersonProfile copyWithZone:]: unrecognized selector sent to instance 0x6180000532c0
+    // -[JRDPersonProfile copyWithZone:]: unrecognized selector sent to instance 0x6180000532c0
 }
 
 -(BOOL)prepareSavePanel:(NSSavePanel *)savePanel {
-    NSString *docName = [self scrub: _profile.name];
+    NSString *docName = [self scrub: self.profile.name];
     if(docName.length > 0) {
         [savePanel setNameFieldStringValue: docName];
     }
@@ -138,67 +167,71 @@ NSString * const emailURL  = @"mailto:";
 #pragma mark - UI Management
 
 -(void)setupUI {
-    _fullNameInput.stringValue = self.profile.name;
-    _emailInput.stringValue    = self.profile.email;
-    _addressInput.stringValue  = self.profile.address;
-
-    if(![_profile.notes isEqualToString: @""]) {
-        _notesInput.string = self.profile.notes;
+    self.fullNameInput.stringValue = self.profile.name;
+    self.emailInput.stringValue    = self.profile.email;
+    self.addressInput.stringValue  = self.profile.address;
+    if(![self.profile.notes isEqualToString: @""]) {
+        self.notesInput.string = self.profile.notes;
     }
-
-    if(_profile.avatar != nil){
-        _avatarInput.image = self.profile.avatar;
+    if(self.profile.avatar){
+        self.avatarInput.image = self.profile.avatar;
     }
 }
 
 #pragma mark - Update Person Model Methods
 
+// I could probably just update all of these. I wasn't sure if I needed more or not.
+
 -(void)updatePersonModelFromTextChange:(NSTextField *)field {
     if (field == self.fullNameInput){
-        _profile.name = [self.fullNameInput.stringValue copy];
+        self.profile.name = [self.fullNameInput.stringValue copy];
     }else if (field == self.emailInput){
-        _profile.email = [self.emailInput.stringValue copy];
+        self.profile.email = [self.emailInput.stringValue copy];
     }else if (field == self.addressInput){
-        _profile.address = [self.addressInput.stringValue copy];
+        self.profile.address = [self.addressInput.stringValue copy];
+    }
+    NSLog(@"A TEXT FIELD UPDATED PERSON MODEL");
+}
+
+-(void)updatePersonModelFromNotesChange {
+    self.profile.notes = [self.notesInput.string copy];
+    NSLog(@"NOTES UPDATED PERSON MODEL");
+}
+
+-(void)updatePersonModelFromImageChange {
+    if(self.avatarInput.image){
+        self.profile.avatar = self.avatarInput.image;
+        NSLog(@"IMAGE UPDATED PERSON MODEL");
     }
 }
 
--(void)updatePersonModelFromNotesChange { _profile.notes = [self.notesInput.string copy]; }
-
--(void)updatePersonModelFromImageChange {
-//_profile.avatar = [self.notesInput.string copy];
-    NSLog(@"IMAGE UPDATED PERSON MODEL");
-}
-
-#pragma mark - Button Actions
+#pragma mark - Button & Image Actions
 
 - (IBAction)emailLink:(id)sender { [self openLinkAtURL: emailURL  withContent: self.profile.email  ]; }
 - (IBAction)bingLink: (id)sender { [self openLinkAtURL: bingURL   withContent: self.profile.address]; }
 - (IBAction)googleMap:(id)sender { [self openLinkAtURL: googleURL withContent: self.profile.address]; }
+- (IBAction)imgUpdate:(id)sender { [self updatePersonModelFromImageChange]; }
 
 #pragma mark - External Link Method
 
 -(void)openLinkAtURL:(NSString *)urlPrefix withContent:(NSString *)content{
     if (content.length > 0){
         NSString *loc = [urlPrefix stringByAppendingString: [content stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-        NSURL *url = [NSURL URLWithString: [loc stringByReplacingOccurrencesOfString: @"%0A" withString: @",%20"]];
+        NSURL *url = [NSURL URLWithString: [loc stringByReplacingOccurrencesOfString: @"%0A" withString: @"%20"]];
         [[NSWorkspace sharedWorkspace] openURL: url];
     }
 }
 
-#pragma mark - Field Delegates
-
--(void)image:(NSImage *)image didLoadRepresentation:(NSImageRep *)rep withStatus:(NSImageLoadStatus)status{
-    // This is For Image
-    NSLog(@"Image Changed");
-}
+#pragma mark - Text Field Delegates
 
 -(void)controlTextDidChange:(NSNotification *)aNotification {
     [self updatePersonModelFromTextChange: [aNotification object]];
+    NSLog(@"Text Changed");
 }
 
 -(void)textDidChange:(NSNotification *)aNotification {
     [self updatePersonModelFromNotesChange];
+    NSLog(@"Notes Changed");
 }
 
 -(BOOL)control:(NSControl *)control textView:(NSTextField *)fieldEditor doCommandBySelector:(SEL)commandSelector{
@@ -214,11 +247,34 @@ NSString * const emailURL  = @"mailto:";
     //NSLog(@"Selector = %@", NSStringFromSelector(commandSelector));
 }
 
+//- (void)textDidEndEditing:(NSNotification *)aNotification{
+//    NSLog(@"DID END EDITING");
+//}
+
+//-(void)controlDidBecomeFirstResponder {
+//    if([self.notesInput.string isEqualToString: @" Notes"]){
+//        self.notesInput.string = @"";
+//    }
+//    NSLog(@"NOTES FOCUSED");
+//}
+
+//-(void)controlDidResignFirstResponder {
+//    NSLog(@"NOTES UNFOCUSED");
+//}
+
+//-(void)textDidEndEditing:(NSNotification *)notification{
+//    [self updatePersonModelFromNotesChange];
+//    if([self.notesInput.string isEqualToString: @""]){
+//        self.notesInput.string = @" Notes";
+//    }
+//    NSLog(@"Notes End Editing");
+//}
+
 #pragma mark - HELPER METHODS
 
 -(NSString*)scrub:(NSString*)string {
-    // I'm not sure if this is appropriate for this model
     // Removes whitespace at the beginning and end of a string
     return [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 }
+
 @end

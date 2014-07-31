@@ -20,6 +20,7 @@
 		170D7C4B19808753005C9AC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 170D7C4919808753005C9AC2 /* InfoPlist.strings */; };
 		170D7C4D19808753005C9AC2 /* HW3_jordandTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 170D7C4C19808753005C9AC2 /* HW3_jordandTests.m */; };
 		170D7C581980886A005C9AC2 /* JRDPersonProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 170D7C571980886A005C9AC2 /* JRDPersonProfile.m */; };
+		170D7C5B19899A69005C9AC2 /* JRDTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 170D7C5A19899A69005C9AC2 /* JRDTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		170D7C4C19808753005C9AC2 /* HW3_jordandTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HW3_jordandTests.m; sourceTree = "<group>"; };
 		170D7C561980886A005C9AC2 /* JRDPersonProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JRDPersonProfile.h; path = model/JRDPersonProfile.h; sourceTree = "<group>"; };
 		170D7C571980886A005C9AC2 /* JRDPersonProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JRDPersonProfile.m; path = model/JRDPersonProfile.m; sourceTree = "<group>"; };
+		170D7C5919899A69005C9AC2 /* JRDTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRDTextView.h; sourceTree = "<group>"; };
+		170D7C5A19899A69005C9AC2 /* JRDTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRDTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 			children = (
 				170D7C3119808753005C9AC2 /* JRDDocument.h */,
 				170D7C3219808753005C9AC2 /* JRDDocument.m */,
+				170D7C5919899A69005C9AC2 /* JRDTextView.h */,
+				170D7C5A19899A69005C9AC2 /* JRDTextView.m */,
 				170D7C561980886A005C9AC2 /* JRDPersonProfile.h */,
 				170D7C571980886A005C9AC2 /* JRDPersonProfile.m */,
 				170D7C3419808753005C9AC2 /* JRDDocument.xib */,
@@ -262,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				170D7C5B19899A69005C9AC2 /* JRDTextView.m in Sources */,
 				170D7C2C19808753005C9AC2 /* main.m in Sources */,
 				170D7C581980886A005C9AC2 /* JRDPersonProfile.m in Sources */,
 				170D7C3319808753005C9AC2 /* JRDDocument.m in Sources */,
