@@ -3,7 +3,7 @@ Profiles
 
 _Week Three Assignment_
 
-<img src="http://cl.ly/image/1z290b0r2c2j/Screen%20Shot%202014-07-31%20at%2012.05.30%20AM.png" width="400px" /><img src="http://cl.ly/image/0f0f0A2d3Q1f/Screen%20Shot%202014-07-30%20at%2011.17.11%20PM.png" width="400px" />
+<img src="http://cl.ly/image/1z290b0r2c2j/Screen%20Shot%202014-07-31%20at%2012.05.30%20AM.png" width="400px" align="left" /><img src="http://cl.ly/image/0f0f0A2d3Q1f/Screen%20Shot%202014-07-30%20at%2011.17.11%20PM.png" width="400px" align="left" />
 
 My Experience was very frustrating on this application. I think that was mainly due to traveling and being behind and stressed because of it however. I got a lot of the things right but I’m still not 100% on how to subclass things and work with elements. I think it’s also frustrating because I know how to do it in other languages easier. I also am not clear when I should be using self. and _self when initializing. I was having errors. 
 
