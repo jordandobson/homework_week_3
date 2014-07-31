@@ -5,6 +5,8 @@ _Week Three Assignment_
 
 ![Filled Profile](http://cl.ly/image/1z290b0r2c2j/Screen%20Shot%202014-07-31%20at%2012.05.30%20AM.png)
 
+<img src="http://cl.ly/image/1z290b0r2c2j/Screen%20Shot%202014-07-31%20at%2012.05.30%20AM.png" width="50%" />
+
 My Experience was very frustrating on this application. I think that was mainly due to traveling and being behind and stressed because of it however. I got a lot of the things right but I’m still not 100% on how to subclass things and work with elements. I think it’s also frustrating because I know how to do it in other languages easier. I also am not clear when I should be using self. and _self when initializing. I was having errors. 
 
 I have a bit of a hard time wrapping my head around how the application should be setup or if I did it correctly. I did have fun though even though I wasn’t successful in every extra attempt I made to enhance the application.
