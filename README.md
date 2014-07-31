@@ -3,7 +3,8 @@ Profiles
 
 _Week Three Assignment_
 
-![New Profile]!(http://cl.ly/image/1z290b0r2c2j/Screen%20Shot%202014-07-31%20at%2012.05.30%20AM.png)
+http://cl.ly/image/1z290b0r2c2j/Screen%20Shot%202014-07-31%20at%2012.05.30%20AM.png
+
 ![Filled Profile](http://f.cl.ly/items/1M2M111z1K3W3p1J3v0Q/Screen%20Shot%202014-07-30%20at%2011.17.11%20PM.png)
 
 My Experience was very frustrating on this application. I think that was mainly due to traveling and being behind and stressed because of it however. I got a lot of the things right but I’m still not 100% on how to subclass things and work with elements. I think it’s also frustrating because I know how to do it in other languages easier. I also am not clear when I should be using self. and _self when initializing. I was having errors. 
