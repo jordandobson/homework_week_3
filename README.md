@@ -1,11 +1,9 @@
-Week Three Assignment
-
-By Jordan Dobson
-
 Profiles
 =========
 
-http://cl.ly/image/0f0f0A2d3Q1f
+_Week Three Assignment_
+
+!http://cl.ly/image/0f0f0A2d3Q1f!
 
 My Experience was very frustrating on this application. I think that was mainly due to traveling and being behind and stressed because of it however. I got a lot of the things right but I’m still not 100% on how to subclass things and work with elements. I think it’s also frustrating because I know how to do it in other languages easier. I also am not clear when I should be using self. and _self when initializing. I was having errors. 
 
